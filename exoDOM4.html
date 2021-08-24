@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExoDOM04</title>
+</head>
+<body>
+    <section class="maSection">
+        <div class="container">DIV1</div>
+        <div class="container">DIV2</div>
+        <div class="container">DIV3</div>
+    </section>
+        <form>
+            <input type="button" value="Cliquez pour mettre sur une seule ligne" onclick="uneLigne()">
+            <input type="button" value="Cliquez pour retour a la disposition initiale" onclick="retourInitiale()">
+         </form>
+
+        <script type="text/javascript">
+            function uneLigne() {
+            changePosition = document.getElementsByClassName("maSection")[0];
+                changePosition.setAttribute("style", "display:flex");
+        }
+        function retourInitiale() {
+            changePosition = document.getElementsByClassName("maSection")[0];
+                changePosition.setAttribute("style", "display:block");
+        }
+
+        
+        </script>
+</body>
+</html>

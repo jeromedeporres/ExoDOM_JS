@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<!-- Début script HTML -->
+<html>
+<!-- Début entête script HTML -->
+<head>
+    <!-- Balise meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Titre du script HTML -->
+    <title>TABLE_01</title>
+</head>
+<!-- Début section body du script HTML -->
+    <body>
+        <!-- Titre du traitement -->
+        <h1>JavaScript - TABLE_01</h1>
+        <!-- Début script JavaScript -->
+        <script type='text/javascript'>
+        /* Affichage du nom du script */
+            alert("TABLE_01");
+            function modifierBorder() {
+                if (document.getElementById("monTableau").border == 1) {
+                    document.getElementById("monTableau").border = 5;
+                } else {
+                    document.getElementById("monTableau").border = 1;
+                }
+            }
+            function modifierCellspacing() {
+                if (document.getElementById("monTableau").cellSpacing == 1) {
+                    document.getElementById("monTableau").cellSpacing = 20;
+                } else {
+                    document.getElementById("monTableau").cellSpacing = 1;
+                }
+            }
+            function modifierCellpadding() {
+                if (document.getElementById("monTableau").cellPadding == 1) {
+                    document.getElementById("monTableau").cellPadding = 30;
+                } else {
+                    document.getElementById("monTableau").cellPadding = 1;
+                }
+            }
+            function AjouterCaption() {
+                var table = document.getElementById("monTableau").createCaption();
+                table.innerHTML = "<b>Voitures de Sport<b>";
+            }
+        </script> 
+        <!-- Tableau HTML -->
+        <table id="monTableau" border="1" cellspacing="1" cellpadding="1">
+            <!-- Définition de la ligne n°0 du tableau (titre) -->
+            <tr>
+                <td>Modèle</td>
+                <td>Puissance</td>
+            </tr>
+            <!-- Définition de la ligne n°1 du tableau -->
+            <tr>
+                <td>Ferrari 512 BB</td>
+                <td>380</td>
+            </tr>
+            <!-- Définition de la ligne n°2 du tableau -->
+            <tr>
+                <td>Lamborghini Miura</td>
+                <td>385</td>
+            </tr>
+            <!-- Définition de la ligne n°3 du tableau -->
+            <tr>
+                <td>Porsche 964 3.6</td>
+                <td>360</td>
+            </tr>
+        </table>
+        <!-- Formulaire avec boutons -->
+        <br />
+        <br />
+        <form>
+            Modification des valeurs d'attributs du tableau
+            <br>
+            <br />
+            <input type="button" id="boutonBorder" value="Modification attribut border" onclick="modifierBorder();" />
+            <br />
+            <input type="button" id="boutonCellspacing" value="Modification attribut cellspacing"
+                onclick="modifierCellspacing();" />
+            <br />
+            <input type="button" id="boutonCellpadding" value="Modification attribut cellpadding"
+                onclick="modifierCellpadding();" />
+            <br />
+            <input type="button" id="boutonCaption" value="Modification du titre de tableau" onclick="AjouterCaption();" />
+        </form>
+    </body>
+</html>

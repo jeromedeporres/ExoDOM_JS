@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExoDOM03</title>
+</head>
+<body>
+<style>
+    span {
+        background-color: none;
+        font-size: 16px;
+        text-decoration: none;
+    }
+</style>
+    <p><span>La Vie</span> est belle...!</p>
+    <form>
+        <input type="button" value="Metre en valeur" onclick="changeStyle()"></input>
+    </form>
+    <script type="text/javascript">
+        function changeStyle() {
+        document.getElementsByTagName("span")[0].setAttribute("style", "background-color: skyblue; font-size: 40px;text-decoration: underline;");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExoDOM05</title>
+</head>
+<body>
+        <h1>Formulaire N°1</h1>
+        <form>
+            <input type="button" value="Button1" id="btn1F1" onclick="afficheParaBtn(this,value,this,id)"></br>
+            <input type="button" value="Button2" id="btn2F1" onclick="afficheParaBtn(this,value,this,id)"></br>
+            <input type="button" value="Button3" id="btn3F1" onclick="afficheParaBtn(this,value,this,id)"></br>
+        </form>
+        <hr>
+        <h1>Formulaire N°2</h1>
+        <form>
+            <input type="button" value="Button1" id="btn1F2" onclick="afficheParaBtn(this,value,this,id)"></br>
+            <input type="button" value="Button2" id="btn2F2" onclick="afficheParaBtn(this,value,this,id)"></br>
+        </form>
+        <hr>
+        <h2 id="nbOfElem1">Nombre de de balises input l'ensemble des formulaires : </h2>
+        <h2 id="nbOfElem2">Nombre de de balises input dans le 2eme formulaire : </h2>
+
+        <script type="text/javascript">
+
+        var nbOfElements = document.getElementsByTagName("input");
+        document.getElementById("nbOfElem1").innerHTML += nbOfElements.length;
+
+        var nbOfElements = document.forms[1].getElementsByTagName("input");
+        document.getElementById("nbOfElem2").innerHTML += nbOfElements.length;
+        
+			function afficheParaBtn(nomBouton, idBouton) {
+				alert("L'intitulé du bouton sélectionné est " + nomBouton + " et ce bouton appartient au formulaire " + document.getElementById(idBouton).form.name);
+			}
+
+
+
+        </script>
+</body>
+</html>

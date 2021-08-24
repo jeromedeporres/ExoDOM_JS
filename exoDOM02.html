@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExoDOM02</title>
+</head>
+    <body>
+        <div style="text-align: left;">Contenu de la Div!</div>
+        <form>
+            <input type="button" value="Deplacer le texte" onclick="deplacer()">
+        </form>
+        <script type="text/javascript">
+            //Method 1
+            function deplacer() {
+                document.getElementsByTagName("div")[0].setAttribute("style", "text-align:right");
+            }
+            //Method 2 
+            
+            /*  function deplacer() {
+                document.getElementsByTagName("div")[0].style.textAlign="right";
+            } */
+
+        </script>
+    </body>
+</html>
